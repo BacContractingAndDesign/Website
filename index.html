@@ -579,8 +579,12 @@
           <div class="cta-line"><span class="ic">loc</span><span>Greater St. Louis metro area</span></div>
         </div>
       </div>
-      <form id="estimateForm" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORMSPREE_ID" method="POST">
-        <input type="hidden" name="_subject" value="New free-estimate request from bacbuildit.com">
+      <form id="estimateForm" action="https://formsubmit.co/bacbuildit@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New free-estimate request from baccontractinganddesign.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://baccontractinganddesign.com/?sent=1">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
         <div class="fld"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
         <div class="fld"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
         <div class="fld"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
@@ -643,14 +647,27 @@
   const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  // Estimate form: POSTs to Formspree once you paste your form ID above.
-  // Until then, it falls back to opening an email so nothing is lost.
-  document.getElementById('estimateForm').addEventListener('submit',function(ev){
-    if(this.action.includes('REPLACE_WITH')){
-      ev.preventDefault();
-      const g=id=>encodeURIComponent(document.getElementById(id).value||'');
-      const body=`Name: ${g('name')}%0D%0APhone: ${g('phone')}%0D%0AEmail: ${g('email')}%0D%0A%0D%0A${g('msg')}`;
-      window.location.href=`mailto:bacbuildit@gmail.com?subject=${encodeURIComponent('Free estimate request')}&body=${body}`;
+  // Estimate form -> FormSubmit (AJAX, so the visitor stays on the page).
+  // Falls back to opening their email client if FormSubmit is ever unreachable.
+  document.getElementById('estimateForm').addEventListener('submit',async function(ev){
+    ev.preventDefault();
+    const form=this, btn=form.querySelector('button[type=submit]');
+    if(form._honey && form._honey.value) return; // bot filled the honeypot -> drop
+    const g=id=>document.getElementById(id).value||'';
+    const orig=btn.textContent; btn.disabled=true; btn.textContent='Sending…';
+    try{
+      const r=await fetch('https://formsubmit.co/ajax/bacbuildit@gmail.com',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify({name:g('name'),phone:g('phone'),email:g('email'),msg:g('msg'),
+          _subject:'New free-estimate request from baccontractinganddesign.com',_template:'table'})
+      });
+      if(!r.ok) throw new Error(r.status);
+      form.innerHTML='<p class="lead"><b>Thanks &mdash; your request is in.</b></p><p class="fine">We&rsquo;ll reply within one business day. Need us sooner? Call (314)&nbsp;202-4037.</p>';
+    }catch(e){
+      btn.disabled=false; btn.textContent=orig;
+      const e2=id=>encodeURIComponent(g(id));
+      window.location.href=`mailto:bacbuildit@gmail.com?subject=${encodeURIComponent('Free estimate request')}&body=Name: ${e2('name')}%0D%0APhone: ${e2('phone')}%0D%0AEmail: ${e2('email')}%0D%0A%0D%0A${e2('msg')}`;
     }
   });
 </script>
