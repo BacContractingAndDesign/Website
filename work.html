@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work — Deck &amp; Porch Photos | BAC Contracting and Design</title>
+<meta name="description" content="Photo gallery of deck and porch rehabs, rebuilds, restorations and custom builds by BAC Contracting and Design across the Greater St. Louis metro area.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Bitter:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B1917;
+    --pine:#24382D;
+    --pine-deep:#182720;
+    --cedar:#C0703A;
+    --cedar-2:#A85E2E;
+    --cedar-soft:#E7C199;
+    --paper:#F3EFE7;
+    --paper-2:#EBE5D8;
+    --card:#FBF9F4;
+    --rule:#D8D0BF;
+    --muted:#6C6559;
+    --green-muted:#5C6B5C;
+    --display:'Bricolage Grotesque',system-ui,sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+    --mono:'Bitter',Georgia,serif;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--body);color:var(--ink);
+    background:#ffffff;
+    line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+  /* eyebrow / mono label — the "spec sheet" signature */
+  .eyebrow{
+    font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--cedar-2);display:inline-flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--cedar);display:inline-block}
+  .on-dark .eyebrow{color:var(--cedar-soft)}
+  .on-dark .eyebrow::before{background:var(--cedar-soft)}
+
+  h1,h2,h3{font-family:var(--display);line-height:1.05;letter-spacing:-.02em;font-weight:700}
+  h1{font-size:clamp(2.4rem,5.6vw,4.3rem);font-weight:800}
+  h2{font-size:clamp(1.9rem,3.8vw,3rem)}
+  h3{font-size:1.15rem;letter-spacing:-.01em}
+  p.lead{font-size:clamp(1.05rem,1.6vw,1.28rem);color:#33302A;max-width:56ch}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;font-family:var(--body);font-weight:600;
+    font-size:1rem;padding:15px 26px;border-radius:2px;cursor:pointer;border:1.5px solid transparent;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;white-space:nowrap;
+  }
+  .btn-primary{background:var(--cedar);color:#fff}
+  .btn-primary:hover{background:var(--cedar-2);transform:translateY(-2px);box-shadow:0 8px 22px rgba(168,94,46,.32)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
+  .on-dark .btn-ghost{color:#fff;border-color:rgba(255,255,255,.55)}
+  .on-dark .btn-ghost:hover{background:#fff;color:var(--pine)}
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
+    outline:3px solid var(--cedar);outline-offset:3px
+  }
+
+  /* ---------- Header ---------- */
+  header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+  header.scrolled{border-bottom-color:var(--rule);box-shadow:0 2px 18px rgba(27,25,23,.06)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{height:34px;width:auto;flex-shrink:0}
+  .nav-links{display:flex;align-items:center;gap:26px;white-space:nowrap}
+  .nav-links a{font-size:.94rem;font-weight:500;color:#3C382F;position:relative}
+  .nav-links a:hover{color:var(--cedar-2)}
+  .nav-cta{display:flex;align-items:center;gap:18px;flex-shrink:0}
+  .nav-phone{font-family:var(--mono);font-weight:700;font-size:.92rem;color:var(--pine);white-space:nowrap}
+  .nav-phone:hover{color:var(--cedar-2)}
+  .hamburger{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+  .hamburger span{width:24px;height:2px;background:var(--ink);transition:.25s}
+  .mobile-menu{display:none}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:64px 0 76px;position:relative}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .hero h1{margin:20px 0 22px}
+  .hero .lead{margin-bottom:30px}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+  .hero-trust{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;font-family:var(--mono);
+    font-size:.78rem;letter-spacing:.04em;color:var(--muted);text-transform:uppercase}
+  .hero-trust b{color:var(--pine)}
+  .hero-trust .dot{width:4px;height:4px;border-radius:50%;background:var(--cedar);display:inline-block}
+
+  /* framed hero image with spec detailing */
+  .frame{position:relative;padding:14px}
+  .frame::before,.frame::after{content:"";position:absolute;width:34px;height:34px;border:2px solid var(--cedar)}
+  .frame::before{top:0;left:0;border-right:0;border-bottom:0}
+  .frame::after{bottom:0;right:0;border-left:0;border-top:0}
+  .frame img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1;border-radius:2px;
+    box-shadow:0 24px 50px -18px rgba(24,39,32,.5)}
+  .frame .spec{position:absolute;bottom:26px;left:-14px;background:var(--pine);color:#fff;
+    font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;
+    padding:8px 14px;border-radius:2px}
+
+  /* ---------- Trust band ---------- */
+  .band{background:var(--pine);color:#fff}
+  .band-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .stat{padding:34px 26px;border-left:1px solid rgba(255,255,255,.12);display:flex;
+    flex-direction:column;gap:4px;justify-content:center}
+  .stat:first-child{border-left:0}
+  .stat .num{font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:1}
+  .stat .num small{font-size:1.1rem;color:var(--cedar-soft)}
+  .stat .lab{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+    color:rgba(255,255,255,.72)}
+  .stat.badge-stat{align-items:flex-start;flex-direction:row;gap:16px;align-items:center}
+  .stat.badge-stat img{height:78px;width:auto;filter:drop-shadow(0 4px 10px rgba(0,0,0,.25))}
+  .stat.badge-stat .txt .num{font-size:1.15rem;letter-spacing:-.01em}
+
+  /* ---------- Section base ---------- */
+  section.block{padding:88px 0}
+  .sec-head{max-width:60ch;margin-bottom:44px}
+  .sec-head h2{margin:16px 0 14px}
+  .sec-head p{color:#403C34;font-size:1.08rem}
+
+  /* ---------- Before / After ---------- */
+  .ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .ba{position:relative;border-radius:2px;overflow:hidden;box-shadow:0 16px 34px -18px rgba(24,39,32,.4)}
+  .ba img{width:100%;aspect-ratio:1/1;object-fit:cover}
+  .ba .tag{position:absolute;top:16px;left:16px;font-family:var(--mono);font-weight:700;font-size:.74rem;
+    letter-spacing:.12em;text-transform:uppercase;padding:7px 13px;border-radius:2px;color:#fff}
+  .ba.before .tag{background:rgba(27,25,23,.86)}
+  .ba.after .tag{background:var(--cedar)}
+  .ba-note{margin-top:22px;font-family:var(--mono);font-size:.82rem;color:var(--muted);
+    display:flex;align-items:center;gap:12px}
+  .ba-note::before{content:"";flex:0 0 40px;height:1px;background:var(--rule)}
+
+  /* ---------- Services ---------- */
+  .svc-alt{background:#F6F5F2}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);
+    border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+  .svc{background:var(--card);padding:30px 28px;min-height:180px;display:flex;flex-direction:column;
+    transition:background .2s}
+  .svc:hover{background:#fff}
+  .svc .no{font-family:var(--mono);font-size:.76rem;color:var(--cedar-2);letter-spacing:.08em;margin-bottom:16px}
+  .svc h3{margin-bottom:9px}
+  .svc p{font-size:.96rem;color:var(--muted)}
+  .svc-foot{margin-top:26px;font-family:var(--mono);font-size:.86rem;color:var(--pine);
+    display:flex;align-items:center;gap:10px}
+  .svc-foot::before{content:"✓";color:var(--cedar);font-weight:700}
+
+  /* ---------- Why ---------- */
+  .why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  .why-list{list-style:none;margin-top:8px}
+  .why-list li{padding:24px 0;border-top:1px solid var(--rule)}
+  .why-list li:last-child{border-bottom:1px solid var(--rule)}
+  .why-list .k{font-family:var(--mono);font-weight:700;color:var(--cedar-2);font-size:.95rem;padding-top:2px}
+  .why-list h3{margin-bottom:5px}
+  .why-list p{color:var(--muted);font-size:.98rem}
+  .why-img{position:relative}
+  .why-img img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:3px;
+    box-shadow:0 22px 46px -20px rgba(24,39,32,.5)}
+
+  /* ---------- Gallery ---------- */
+  .gal-alt{background:var(--pine);color:#fff}
+  .gal-alt .sec-head p{color:rgba(255,255,255,.8)}
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .gal figure{position:relative;overflow:hidden;border-radius:2px}
+  .gal img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .5s ease}
+  .gal figure:hover img{transform:scale(1.06)}
+  .gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#fff;
+    background:linear-gradient(transparent,rgba(24,39,32,.85))}
+  /* timelapse card: framing -> finished crossfade */
+  .gal figure.tl{aspect-ratio:1/1}
+  .gal figure.tl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;aspect-ratio:auto;z-index:1}
+  .gal figure.tl .frame-a{animation:tlA 7s ease-in-out infinite}
+  .gal figure.tl .frame-b{animation:tlB 7s ease-in-out infinite}
+  .gal figure.tl figcaption{z-index:3}
+  .tl-chip{position:absolute;top:12px;left:12px;z-index:3;font-family:var(--mono);font-weight:700;
+    font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;padding:5px 9px;border-radius:2px}
+  .tl-chip.chip-a{background:rgba(27,25,23,.82);animation:tlA 7s ease-in-out infinite}
+  .tl-chip.chip-b{background:var(--cedar);animation:tlB 7s ease-in-out infinite}
+  @keyframes tlA{0%,42%{opacity:1}50%,92%{opacity:0}100%{opacity:1}}
+  @keyframes tlB{0%,42%{opacity:0}50%,92%{opacity:1}100%{opacity:0}}
+  @media (prefers-reduced-motion:reduce){
+    .gal figure.tl .frame-a,.svc2 .pic.tl .frame-a,.tl-chip.chip-a{opacity:0;animation:none}
+    .gal figure.tl .frame-b,.svc2 .pic.tl .frame-b,.tl-chip.chip-b{opacity:1;animation:none}
+  }
+
+  /* ---------- Reviews ---------- */
+  .rev-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .rev{background:var(--card);border:1px solid var(--rule);border-radius:3px;padding:30px 30px 26px;
+    display:flex;flex-direction:column}
+  .rev .stars{color:var(--cedar);letter-spacing:3px;font-size:1rem;margin-bottom:14px}
+  .rev p{font-size:1.02rem;color:#302D27;margin-bottom:18px}
+  .rev .who{margin-top:auto;font-family:var(--mono);font-size:.82rem;color:var(--muted);
+    display:flex;align-items:center;gap:10px}
+  .rev .who b{color:var(--pine);font-weight:700}
+  .rev-more{margin-top:34px;display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);
+    font-weight:700;font-size:.9rem;color:var(--cedar-2)}
+  .rev-more:hover{gap:16px;color:var(--pine)}
+
+  /* ---------- Estimate / contact ---------- */
+  .cta{background:var(--pine-deep);color:#fff}
+  .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .cta h2{margin:16px 0 16px}
+  .cta .lead{color:rgba(255,255,255,.82)}
+  .cta-contact{margin-top:30px;display:flex;flex-direction:column;gap:16px}
+  .cta-line{display:flex;align-items:center;gap:14px;font-size:1.05rem}
+  .cta-line .ic{width:38px;height:38px;border:1px solid rgba(255,255,255,.3);border-radius:2px;
+    display:grid;place-items:center;color:var(--cedar-soft);font-family:var(--mono);font-size:.8rem}
+  .cta-line b{font-family:var(--mono)}
+  form{background:var(--card);color:var(--ink);padding:32px;border-radius:3px}
+  form .fld{margin-bottom:16px}
+  form label{display:block;font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+  form input,form textarea{width:100%;border:1px solid var(--rule);background:#fff;border-radius:2px;
+    padding:12px 14px;font-family:var(--body);font-size:1rem;color:var(--ink)}
+  form textarea{resize:vertical;min-height:96px}
+  form .btn{width:100%;justify-content:center;margin-top:6px}
+  form .fine{font-family:var(--mono);font-size:.72rem;color:var(--muted);text-align:center;margin-top:12px}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--pine);color:#fff;padding:56px 0 30px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;padding-bottom:36px;
+    border-bottom:1px solid rgba(255,255,255,.14)}
+  .foot-logo{height:32px;width:auto;margin-bottom:16px}
+  .foot p{color:rgba(255,255,255,.72);font-size:.95rem;max-width:34ch}
+  .foot h4{font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--cedar-soft);margin-bottom:14px}
+  .foot ul{list-style:none}
+  .foot ul li{color:rgba(255,255,255,.78);font-size:.95rem;margin-bottom:8px}
+  .foot-bottom{padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+    font-family:var(--mono);font-size:.76rem;color:rgba(255,255,255,.55)}
+
+  /* Rehab vs Replace */
+  .save-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .save-card{background:var(--card);border:1px solid var(--rule);border-radius:3px;padding:30px}
+  .save-card .tier{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .save-card .cost{font-family:var(--display);font-weight:800;font-size:2.2rem;letter-spacing:.02em;line-height:1}
+  .save-card.replace .cost{color:var(--ink)}
+  .save-card.rehab{border-color:var(--cedar);box-shadow:0 12px 32px -16px rgba(192,112,58,.5)}
+  .save-card.rehab .cost{color:var(--cedar-2)}
+  .save-card ul{list-style:none;margin-top:16px}
+  .save-card li{padding:9px 0;border-top:1px solid var(--rule);font-size:.96rem;color:#3a362f;display:flex;gap:11px;align-items:flex-start}
+  .save-card li::before{content:"–";color:var(--muted);font-weight:700}
+  .save-card.rehab li::before{content:"✓";color:var(--cedar)}
+  .save-banner{margin-top:22px;background:var(--pine);color:#fff;border-radius:3px;padding:24px 30px;
+    display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;justify-content:space-between}
+  .save-banner .big{font-family:var(--display);font-weight:800;font-size:clamp(1.25rem,2.4vw,1.7rem);letter-spacing:-.01em}
+  .save-banner .big em{color:var(--cedar-soft);font-style:normal}
+
+  /* combined services-with-photos cards */
+  .svc2-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .svc2{background:var(--card);border:1px solid var(--rule);border-radius:4px;overflow:hidden;
+    display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+  .svc2:hover{transform:translateY(-3px);box-shadow:0 16px 32px -18px rgba(24,39,32,.4)}
+  .svc2 .pic{position:relative;aspect-ratio:4/3;overflow:hidden}
+  .svc2 .pic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+  .svc2:hover .pic img{transform:scale(1.05)}
+  .svc2 .pic.tl img{position:absolute;inset:0}
+  .svc2 .pic.tl .frame-a{animation:tlA 7s ease-in-out infinite}
+  .svc2 .pic.tl .frame-b{animation:tlB 7s ease-in-out infinite}
+  .svc2 .body{padding:16px 18px 20px}
+  .svc2 .body h3{font-size:1.02rem;margin-bottom:5px}
+  .svc2 .body p{font-size:.88rem;color:var(--muted);line-height:1.5}
+  .svc2.txt{background:var(--pine);border-color:var(--pine);color:#fff}
+  .svc2.txt .body{padding:26px 22px 24px;display:flex;flex-direction:column;height:100%}
+  .svc2.txt .kicker{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--cedar-soft);margin-bottom:12px}
+  .svc2.txt .body h3{color:#fff;font-size:1.06rem;margin-bottom:7px}
+  .svc2.txt .body p{color:rgba(255,255,255,.76);font-size:.9rem}
+  .svc2.txt ul{list-style:none;margin-top:12px}
+  .svc2.txt li{font-size:.86rem;color:rgba(255,255,255,.82);padding:5px 0 5px 16px;position:relative}
+  .svc2.txt li::before{content:"";position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--cedar)}
+  .angi-verified{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1.5px solid var(--cedar);
+    color:var(--pine);font-family:var(--mono);font-weight:700;font-size:.82rem;letter-spacing:.03em;
+    padding:8px 15px 8px 9px;border-radius:100px;margin-top:8px;transition:transform .15s,box-shadow .15s}
+  .angi-verified:hover{transform:translateY(-1px);box-shadow:0 8px 20px -10px rgba(192,112,58,.5)}
+  .angi-verified .chk{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;
+    background:var(--cedar);color:#fff;font-size:.72rem}
+  /* reveal animation */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+    .gal figure:hover img{transform:none}
+  }
+
+  /* ---------- Responsive ---------- */
+  /* prevent grid children from forcing horizontal overflow on small phones */
+  .hero-grid>*,.cta-grid>*,.why-grid>*,.save-grid>*,.svc2-grid>*,.foot-grid>*,.ba-grid>*,.rev-grid>*{min-width:0}
+  @media(max-width:640px){ .save-banner{padding:20px 18px} .save-banner .btn{width:100%;justify-content:center} }
+  @media(max-width:400px){ .wrap{padding:0 16px} }
+  @media(max-width:940px){ .foot-grid{grid-template-columns:1fr 1fr;gap:30px} }
+  @media(max-width:640px){ .foot-grid{grid-template-columns:1fr;gap:26px} .foot-bottom{flex-direction:column;gap:6px} }
+  /* collapse nav to hamburger well before things crowd */
+  @media(max-width:1080px){ .nav-links{gap:20px} .nav-links a{font-size:.9rem} }
+  @media(max-width:940px){
+    .nav-links,.nav-phone{display:none}
+    .hamburger{display:flex}
+    .mobile-menu{display:block;position:fixed;inset:74px 0 auto 0;background:#fff;
+      border-bottom:1px solid var(--rule);padding:12px 24px 22px;transform:translateY(-120%);
+      transition:transform .3s ease;z-index:90;box-shadow:0 12px 30px rgba(27,25,23,.1)}
+    .mobile-menu.open{transform:none}
+    .mobile-menu a{display:block;padding:13px 0;font-size:1.05rem;border-bottom:1px solid var(--rule)}
+    .mobile-menu a:last-child{border:0}
+    .mobile-menu .btn{width:100%;justify-content:center;margin-top:14px}
+  }
+  @media(max-width:940px){
+    .hero-grid,.why-grid,.cta-grid{grid-template-columns:1fr;gap:40px}
+    .why-img{order:-1;max-width:420px}
+    .band-grid{grid-template-columns:1fr 1fr}
+    .stat:nth-child(3){border-left:0}
+    .stat:nth-child(n+3){border-top:1px solid rgba(255,255,255,.12)}
+    .svc-grid,.svc2-grid{grid-template-columns:1fr 1fr}
+    .gal-grid{grid-template-columns:1fr 1fr}
+    .rev-grid{grid-template-columns:1fr}
+  }
+  @media(max-width:640px){
+    .band-grid{grid-template-columns:1fr}
+    .stat{border-left:0;border-top:1px solid rgba(255,255,255,.12)}
+    .stat:first-child{border-top:0}
+    .svc-grid,.svc2-grid,.ba-grid,.gal-grid,.save-grid{grid-template-columns:1fr}
+    section.block{padding:60px 0}
+    .frame .spec{left:0}
+  }
+</style>
+<style>
+  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .work-grid figure{position:relative;overflow:hidden;border-radius:4px;border:1px solid var(--rule);background:var(--card)}
+  .work-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;transition:transform .5s}
+  .work-grid figure:hover img{transform:scale(1.05)}
+  .work-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;
+    font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;color:#fff;
+    background:linear-gradient(transparent,rgba(24,39,32,.88))}
+  .work-grid figure.tall{grid-column:span 2}
+  .work-grid figure.tall img{aspect-ratio:2/1}
+  .cat{margin:0 0 20px}
+  .cat h2{font-size:clamp(1.5rem,2.6vw,2rem)}
+  .work-sec{padding:52px 0 0}
+  .back-cta{background:var(--pine-deep);color:#fff;margin-top:80px}
+  @media(max-width:940px){.work-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:640px){.work-grid{grid-template-columns:1fr}.work-grid figure.tall{grid-column:span 1}.work-grid figure.tall img{aspect-ratio:1/1}}
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <div class="wrap nav">
+    <a href="index.html" aria-label="BAC Contracting and Design home"><img decoding="async" fetchpriority="high" width="900" height="272" class="logo" src="images/img-20b8680ac4.webp" alt="BAC Contracting and Design"></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#work">Deck Rehab</a>
+      <a href="index.html#services">Services</a>
+      <a href="work.html">Photos</a>
+      <a href="index.html#why">Why BAC</a>
+      <a href="index.html#reviews">Reviews</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:3142024037">(314) 202-4037</a>
+      <a class="btn btn-primary" href="index.html#estimate">Free estimate</a>
+      <button class="hamburger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#work">Deck Rehab</a>
+    <a href="index.html#services">Services</a>
+    <a href="work.html">Photos</a>
+    <a href="index.html#why">Why BAC</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="tel:3142024037">Call (314) 202-4037</a>
+    <a class="btn btn-primary" href="index.html#estimate">Get a free estimate</a>
+  </div>
+</header>
+
+<main>
+  <section class="block" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Our work</span>
+        <h2>Ten years of decks and porches.</h2>
+        <p>Rehabs, rebuilds, restorations, and custom builds from across the Greater St.&nbsp;Louis metro area.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REHABS -->
+  <section class="work-sec">
+    <div class="wrap">
+      <div class="cat reveal"><span class="eyebrow">Deck rehabs &amp; rebuilds</span></div>
+      <div class="work-grid reveal">
+        <figure><img decoding="async" loading="lazy" width="700" height="700" src="images/img-0a555f0503.webp" alt="Weathered failing deck before rehab"><figcaption>Before &mdash; failing boards and rails</figcaption></figure>
+        <figure><img decoding="async" loading="lazy" width="700" height="700" src="images/img-1a8899a496.webp" alt="The same deck after rehab with new decking and railings"><figcaption>After &mdash; rebuilt and solid</figcaption></figure>
+        <figure><img decoding="async" loading="lazy" width="700" height="700" src="images/img-6f8c1f5fb9.webp" alt="Deck after board replacement at golden hour"><figcaption>Deck board replacement</figcaption></figure>
+        <figure><img decoding="async" loading="lazy" width="700" height="700" src="images/img-1fa371feeb.webp" alt="Octagonal deck rehab with railings and landscape lighting"><figcaption>Deck rehab &amp; landing</figcaption></figure>
+        <figure><img decoding="async" loading="lazy" width="700" height="700" src="images/img-3df91b5ac9.webp" alt="Cedar deck with board replacement and railings"><figcaption>Cedar deck rehab</figcaption></figure>
+        <figure><img decoding="async" loading="lazy" width="700" height="700" src="images/img-1ff9b739f6.webp" alt="Cedar deck overlooking a pool"><figcaption>Cedar deck by the pool</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOM BUILDS -->
+  <section class="work-sec">
+    <div class="wrap">
+      <div class="cat reveal"><span class="eyebrow">Custom builds</span></div>
+      <div class="work-grid reveal">
+        <figure class="tall"><img decoding="async" loading="lazy" width="700" height="700" src="images/img-ea565430ad.webp" alt="Large custom wood deck wrapping a Tudor brick home"><figcaption>Custom deck build</figcaption></figure>
+        <figure><img decoding="async" loading="lazy" width="900" height="900" src="images/img-ea634b7ead.webp" alt="Elevated custom deck with black railings over a pool"><figcaption>Elevated deck &amp; stairs</figcaption></figure>
+        <figure><img decoding="async" loading="lazy" width="700" height="700" src="images/img-7e044426ce.webp" alt="Two-story deck and staircase on a brick rowhouse"><figcaption>Two-story deck</figcaption></figure>
+        <figure><img decoding="async" loading="lazy" width="700" height="700" src="images/img-2ff19680f3.webp" alt="Deck stairs with landing and black metal railings"><figcaption>Stair landing &amp; railings</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORCHES -->
+  <section class="work-sec">
+    <div class="wrap">
+      <div class="cat reveal"><span class="eyebrow">Porches &amp; historic work</span></div>
+      <div class="work-grid reveal">
+        <figure><img decoding="async" loading="lazy" width="900" height="900" src="images/img-c30a82d945.webp" alt="Historic stone rowhouse porch with turned-spindle railings"><figcaption>Historic district porch</figcaption></figure>
+        <figure><img decoding="async" loading="lazy" width="900" height="900" src="images/img-efbe7f5225.webp" alt="Restored front porch with columns and railings on a historic home"><figcaption>Front porch restoration</figcaption></figure>
+        <figure><img decoding="async" loading="lazy" width="900" height="900" src="images/img-4bf180ef98.webp" alt="Elevated screened-in porch on a Tudor brick home"><figcaption>Screened-in porch</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTDOOR LIVING -->
+  <section class="work-sec">
+    <div class="wrap">
+      <div class="cat reveal"><span class="eyebrow">Patios, pergolas &amp; lighting</span></div>
+      <div class="work-grid reveal">
+        <figure><img decoding="async" loading="lazy" width="700" height="700" src="images/img-53b4a3c75c.webp" alt="Covered patio with pergola and string lights"><figcaption>Covered patio &amp; pergola</figcaption></figure>
+        <figure><img decoding="async" loading="lazy" width="700" height="700" src="images/img-d0d6eb4c52.webp" alt="Deck with post-cap and landscape lighting at night"><figcaption>Deck lighting</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="block back-cta on-dark" style="margin-top:70px">
+    <div class="wrap" style="text-align:center">
+      <span class="eyebrow" style="justify-content:center">Free estimate</span>
+      <h2 style="margin:16px 0 14px">See something like your project?</h2>
+      <p class="lead" style="margin:0 auto 26px">Tell us what your deck or porch needs and we&rsquo;ll get you an honest, free estimate.</p>
+      <a class="btn btn-primary" href="index.html#estimate">Get a free estimate</a>
+      <a class="btn btn-ghost" href="tel:3142024037" style="margin-left:10px">Call (314) 202-4037</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img decoding="async" loading="lazy" width="900" height="272" class="foot-logo" src="images/img-c56da3584b.webp" alt="BAC Contracting and Design">
+        <p>Deck &amp; porch repair, rebuilds, and restoration. Ten years of honest craftsmanship across the Greater St. Louis metro area.</p>
+      </div>
+      <div>
+        <h4>Service area</h4>
+        <ul>
+          <li>Greater St. Louis metro area</li>
+          <li>St. Louis City &amp; County</li>
+          <li>&amp; surrounding communities</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li>(314) 202-4037</li>
+          <li><a href="mailto:bacbuildit@gmail.com" style="color:var(--cedar-soft)">bacbuildit@gmail.com</a></li>
+          <li>Mon–Fri, 8am–5pm</li>
+          <li><a href="index.html">&larr; Back to home</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 BAC Contracting and Design, LLC</span>
+      <span>5.0 on Angi &middot; Super Service Award 2025</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const header=document.getElementById('site-header');
+  const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>8);
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  const burger=document.getElementById('burger'),menu=document.getElementById('mobileMenu');
+  burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
